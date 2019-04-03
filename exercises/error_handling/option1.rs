@@ -7,11 +7,17 @@
 fn main() {
     let mut list = vec![3];
 
-    let last = list.pop().unwrap();
-    println!("The last item in the list is {:?}", last);
+    let last = list.pop();
+    match last {
+        Some(el) => println!("The last item in the list is {:?}", el),
+        None     => println!("Nothing in the list!"),
+    }
 
-    let second_to_last = list.pop().unwrap();
-    println!("The second-to-last item in the list is {:?}", second_to_last);
+    let second_to_last = list.pop();
+    match second_to_last {
+        Some(el) => println!("The second-to-last item in the list is {:?}", el),
+        None     => println!("Nothing in the list!"),
+    }
 }
 
 

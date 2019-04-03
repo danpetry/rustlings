@@ -9,6 +9,9 @@
 
 // Put your function here!
 // fn ..... {
+fn calculateprice(no_apples: i8) -> i8{
+    if (no_apples > 40) {no_apples} else {no_apples * 2}
+}
 
 // Don't modify this function!
 #[test]
